@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>AngularJS Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-route.js"></script>
+    <script src="module.js"></script>
+    <script src="routes.js"></script>
+
+    <link rel="stylesheet" href="base.css" />
+
+    <link rel="stylesheet" href="taco-clock/taco-clock.css" />
+    <script src="taco-clock/taco-clock.component.js"></script>
+    <script src="taco-clock/taco-clock.service.js"></script>
+
+    <link rel="stylesheet" href="taco-list/taco-list.css" />
+    <script src="taco-list/taco-list.component.js"></script>
+
+    <link rel="stylesheet" href="taco-restaurant/taco-restaurant.css" />
+    <script src="taco-restaurant/taco-restaurant.component.js"></script>
+
+  </head>
+
+  <body ng-app="tacoApp">
+     <ng-view></ng-view>
+  </body>
+
+</html>
