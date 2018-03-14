@@ -4,6 +4,6 @@ angular.module("tacoApp").component("tacoClock", {
     this.tacoRestaurants = [];
     TacoClockService.fetchRestaurants().then(
       tacoRestaurants => this.tacoRestaurants = tacoRestaurants
-    )
+    );
   }]
 });
