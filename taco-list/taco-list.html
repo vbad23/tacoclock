@@ -1,0 +1,6 @@
+HELLO! | {{$ctrl.restaurants[0].restaurant.name}} | I am in the Taco List Component<hr>
+<div>
+  <taco-card restaurant="restaurant" ng-repeat="restaurant in $ctrl.restaurants"></taco-card>
+</div>
+
+<!-- We need to add a binding to the taco-card component, this html needs to link to the taco-card html, and the taco-card html needs to have an ng-repeat for each restaurant in restaurants -->
