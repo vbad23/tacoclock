@@ -1,7 +1,7 @@
 angular.module("tacoApp").component("tacoCard", {
   templateUrl: "taco-card/taco-card.html",
   bindings: {
-    restaurants: "<",
+    restaurant: "<",
   },
   controller: ['RestaurantService', function(RestaurantService) {
   }]
