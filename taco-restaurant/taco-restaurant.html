@@ -1,13 +1,20 @@
-<div class="">
-  <p>{{$ctrl.restaurant.name}}</p>
-  <p><a href="https://maps.google.com/?ll=
-    {{$ctrl.restaurant.location.latitude}},
-    {{$ctrl.restaurant.location.longitude}}">
-    {{$ctrl.restaurant.location.address}}</a></p>
-  <p>Price Range: {{"$".repeat($ctrl.priceSymbol)}}</p>
-  <p>Average Price for Two: ${{$ctrl.restaurant.average_cost_for_two}}</p>
-
-</div>
-<div class="">
-  <a href="#!/"><button>Back</button></a>
+<div class="restaurant-card">
+  <div class="header">
+    Taco Time GR
+  </div>
+  <div class="restaurant-image">
+    <img src="" alt="">
+  </div>
+  <div class="restaurant-info">
+    <p class="restaurant-name">{{$ctrl.restaurant.name}}</p>
+    <p><a href="https://maps.google.com/?ll=
+        {{$ctrl.restaurant.location.latitude}},
+        {{$ctrl.restaurant.location.longitude}}">
+        {{$ctrl.restaurant.location.address}}</a></p>
+    <p>Price Range: {{"$".repeat($ctrl.restaurant.price_range)}}</p>
+    <p>Average Price for Two: ${{$ctrl.restaurant.average_cost_for_two}}</p>
+  </div>
+  <div class="back-button">
+    <a href="#!/"><button>Back</button></a>
+  </div>
 </div>
