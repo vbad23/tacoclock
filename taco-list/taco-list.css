@@ -1,3 +1,13 @@
 .main-header {
   font-family: var(--heading-font);
+  font-size: var(--header-lg);
+  margin-left: 10%;
+}
+
+.blurb {
+  margin-left: 10%;
+}
+
+.search {
+  margin-left: 10%;
 }
