@@ -4,11 +4,11 @@
 <h1>
 </div>
 <div class="blurb">
-  <p>Quirky Blurb</p>
+  <p>Search for a Taco Place, and Find the Road to Happiness</p>
 </div>
 <div class="Search">
 <input ng-model="$ctrl.search" class="search" placeholder="Search"/>
 </div>
-<div>
-  <taco-card restaurant="restaurant" ng-repeat="restaurant in $ctrl.restaurants | filter:$ctrl.search"></taco-card>
+<div class="card-grid">
+  <taco-card class="taco-card-instance" restaurant="restaurant" ng-repeat="restaurant in $ctrl.restaurants | filter:$ctrl.search"></taco-card>
 </div>

@@ -1,11 +1,12 @@
+<a href="#!/taco-restaurant/{{$ctrl.restaurant.restaurant.id}}">
 <div class="card-container">
   <div class="color-block">
   </div>
   <div class="restaurant-name-container">
-    <p class="information-item "><a href="#!/taco-restaurant/{{$ctrl.restaurant.restaurant.id}}">{{$ctrl.restaurant.restaurant.name}}</a></p>
+    <p class="information-item">{{$ctrl.restaurant.restaurant.name}}</p>
   </div>
   <div class="restaurant-price-range-container">
-    <p class="information-item">Price Range: {{"$".repeat($ctrl.restaurant.restaurant.price_range)}}</p>
+    <p class="information-item">Price Range:<span class="dollar-signs"> {{"$".repeat($ctrl.restaurant.restaurant.price_range)}}</span></p>
   </div>
   <div class="restaurant-rating-container">
     <p class="information-item">Rating:</p>
@@ -22,3 +23,4 @@
     </div>
     </div>
   </div>
+</a>

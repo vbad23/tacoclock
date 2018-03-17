@@ -40,7 +40,11 @@
 
 .restaurant-name-container > p {
   font-size: var(--header-med);
+}
 
+.dollar-signs {
+  color: #ABDA2D;
+  padding: 15px;
 }
 
 .restaurant-price-range-container {
@@ -54,13 +58,13 @@
   grid-column: 2/3;
   grid-row: 3/4;
   display: flex;
-
+  align-items: center;
 }
 
 .rating-star-container {
   position: relative;
   width: 110px;
-  padding: 50px;
+  padding: 15px;
 }
 
 .rating-stars-percentage {
