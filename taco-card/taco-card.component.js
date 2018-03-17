@@ -5,5 +5,5 @@ angular.module("tacoApp").component("tacoCard", {
   },
   controller: ['RestaurantService', function(RestaurantService) {
   }]
-  
+
 });

@@ -1,6 +1,11 @@
+.main-header-container {
+  background-color: var(--color-block);
+}
+
 .main-header {
   font-family: var(--heading-font);
   font-size: var(--header-lg);
+  color: #fff;
   margin-left: 10%;
 }
 
