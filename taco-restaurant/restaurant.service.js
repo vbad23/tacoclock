@@ -8,5 +8,3 @@ angular.module("tacoApp").service("RestaurantService", ["$http", function($http)
     )
   }
 }]);
-
-// rename to Restaurant service
