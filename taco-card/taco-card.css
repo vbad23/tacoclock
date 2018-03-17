@@ -45,4 +45,15 @@
 .restaurant-rating-container {
   grid-column: 2/3;
   grid-row: 3/4;
+  
+  // Bree's Taco card CSS
+  
+.taco-card .rating-star-container {
+  position: relative;
+  width: 100px;
+  overflow: hidden;
+}
+
+.taco-card .rating-star-container .rating-stars {
+  color: yellow;
 }
