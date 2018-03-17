@@ -6,7 +6,7 @@
     <p class="information-item "><a href="#!/taco-restaurant/{{$ctrl.restaurant.restaurant.id}}">{{$ctrl.restaurant.restaurant.name}}</a></p>
   </div>
   <div class="restaurant-price-range-container">
-    <p class="information-item">Price Range: {{$ctrl.restaurant.restaurant.price_range}}</p>
+    <p class="information-item">Price Range: {{"$".repeat($ctrl.restaurant.restaurant.price_range)}}</p>
   </div>
   <div class="restaurant-rating-container">
     <p class="information-item">Rating: {{$ctrl.restaurant.restaurant.user_rating.aggregate_rating}}</p>
