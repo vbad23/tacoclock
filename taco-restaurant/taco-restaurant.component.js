@@ -7,7 +7,6 @@ angular.module("tacoApp").component("tacoRestaurant", {
     RestaurantService.fetchRestaurant($routeParams.id).then(
       restaurant => {
         this.restaurant = restaurant;
-        this.priceSymbol = "$".repeat(this.restaurant.price_range);
       }
     );
   }]
