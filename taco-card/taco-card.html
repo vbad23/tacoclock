@@ -9,6 +9,14 @@
     <p class="information-item">Price Range: {{"$".repeat($ctrl.restaurant.restaurant.price_range)}}</p>
   </div>
   <div class="restaurant-rating-container">
-    <p class="information-item">Rating: {{$ctrl.restaurant.restaurant.user_rating.aggregate_rating}}</p>
+    <p class="information-item">Rating: 
+    <div class="rating-star-container">
+      <div class="rating-stars" style="width: {{$ctrl.ratingPercentage()}}">
+        <span class="fas fa-star"></span>
+        <span class="fas fa-star"></span>
+        <span class="fas fa-star"></span>
+        <span class="fas fa-star"></span>
+        <span class="fas fa-star"></span>
+      </div>
+  </div></p>
   </div>
-</div>
