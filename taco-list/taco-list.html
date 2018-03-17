@@ -1,8 +1,14 @@
-<h1>
+<div>
+<h1 class="main-header">
   It's Always Taco Time!
 <h1>
-
+</div>
+<div>
+  <p>Quirky Blurb</p>
+</div>
+<div>
 <input ng-model="$ctrl.search" class="search" placeholder="Search"/>
+</div>
 <div>
   <taco-card restaurant="restaurant" ng-repeat="restaurant in $ctrl.restaurants | filter:$ctrl.search"></taco-card>
 </div>
