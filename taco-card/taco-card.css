@@ -1,0 +1,9 @@
+.taco-card .rating-star-container {
+  position: relative;
+  width: 100px;
+  overflow: hidden;
+}
+
+.taco-card .rating-star-container .rating-stars {
+  color: yellow;
+}

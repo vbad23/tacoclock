@@ -1,5 +1,19 @@
-<div>
+<div class="taco-card">
   <p>{{$ctrl.restaurant.restaurant.name}}</p>
   <p>Price Range: {{$ctrl.restaurant.restaurant.price_range}}</p>
+  <p>Rating Stars:
+  <div class="rating-star-container">
+      <div class="rating-stars" style="width: {{$ctrl.ratingPercentage()}}">
+        <span class="fas fa-star"></span>
+        <span class="fas fa-star"></span>
+        <span class="fas fa-star"></span>
+        <span class="fas fa-star"></span>
+        <span class="fas fa-star"></span>
+      </div>
+  </div>
+  <p>Rating Percentage: {{$ctrl.ratingPercentage()}}
   <p>Rating: {{$ctrl.restaurant.restaurant.user_rating.aggregate_rating}}</p><hr>
+
 </div>
+
+<!-- <div class="star-ratings-css-top" style="width: 84%"> -->

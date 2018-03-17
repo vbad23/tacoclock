@@ -4,5 +4,9 @@ angular.module("tacoApp").component("tacoCard", {
     restaurant: "<",
   },
   controller: ['RestaurantService', function(RestaurantService) {
+
+    this.ratingPercentage = function() {
+      return this.restaurant.restaurant.user_rating.aggregate_rating / 5 * 100;
+    }
   }]
 });
