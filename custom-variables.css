@@ -3,8 +3,16 @@
   --body-font: 'Open Sans', sans-serif;
   /* --background-color:  */
   --header-lg: 60px;
-  --header-med: 40px;
-  --body-size: 25px;
+  --header-med: 25px;
+  --body-size: 20px;
   --label-font-color: #a5a1a0;
   --color-block: #9F0038;
+
+}
+
+@media(max-width 1030px) {
+  :root {
+    --header-med: 20px;
+    --body-size: 15px;
+  }
 }

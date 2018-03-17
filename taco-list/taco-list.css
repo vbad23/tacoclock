@@ -11,8 +11,22 @@
 
 .blurb {
   margin-left: 10%;
+  font-family: var(--body-font);
+  font-size: var(--body-size);
 }
 
 .search {
   margin-left: 10%;
+}
+
+.card-grid {
+  margin: 0 10% 0 10%;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.taco-card-instance {
+  display: block;
+  width: 100%;
 }
