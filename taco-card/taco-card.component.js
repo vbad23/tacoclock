@@ -9,4 +9,5 @@ angular.module("tacoApp").component("tacoCard", {
       return this.restaurant.restaurant.user_rating.aggregate_rating / 5 * 100;
     }
   }]
+
 });

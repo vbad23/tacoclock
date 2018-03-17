@@ -1,0 +1,10 @@
+:root {
+  --heading-font: 'Fjalla One', sans-serif;
+  --body-font: 'Oswald', sans-serif;
+  /* --background-color:  */
+  --header-lg: 60px;
+  --header-med: 40px;
+  --body-size: 25px;
+  --label-font-color: #a5a1a0;
+  --color-block: #9F0038;
+}

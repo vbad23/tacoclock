@@ -1,0 +1,18 @@
+.main-header-container {
+  background-color: var(--color-block);
+}
+
+.main-header {
+  font-family: var(--heading-font);
+  font-size: var(--header-lg);
+  color: #fff;
+  margin-left: 10%;
+}
+
+.blurb {
+  margin-left: 10%;
+}
+
+.search {
+  margin-left: 10%;
+}
