@@ -6,7 +6,7 @@
   /* box-shadow: 0px 5px 5px #d2d4d8; */
   /* The next two lines are from hover demo site */
   box-shadow: 0 1px 2px rgba(0,0,0,0.3);
-  transition: box-shadow 0.3s ease-in-out;
+  transition:0.3s ease-in-out;
 }
 
 .card-container:hover {
@@ -23,6 +23,7 @@
   grid-column: 1/3;
   grid-row: 1/2;
 }
+
 .information-item {
   font-family: var(--body-font);
   font-size: var(--body-size);
@@ -58,3 +59,32 @@
 .taco-card .rating-star-container .rating-stars {
   color: yellow;
 }
+
+.rating-star-container {
+  position: relative;
+  width: 110px;
+}
+
+.stars-background-container {
+  position: relative;
+  width: 110px;
+  overflow: hidden;
+}
+
+
+
+.rating-stars-percentage {
+  color: yellow;
+  width: 100px;
+  overflow: hidden;
+}
+/*
+.taco-card .rating-star-container {
+  position: relative;
+  width: 100px;
+  overflow: hidden;
+}
+
+.taco-card .rating-star-container .rating-stars {
+  color: yellow;
+} */
