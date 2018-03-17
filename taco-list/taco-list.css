@@ -20,8 +20,10 @@
 }
 
 .card-grid {
+  margin: 0 10% 0 10%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .taco-card-instance {
