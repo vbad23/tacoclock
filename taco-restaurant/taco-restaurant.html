@@ -14,8 +14,8 @@
       {{$ctrl.restaurant.location.longitude}}"
       target="_blank">
         <button><i class="fas fa-map-marker"></i> Get Directions with Google Maps</button></a></p>
-    <p>Price Range: {{"$".repeat($ctrl.restaurant.price_range)}}</p>
-    <p>Average Price for Two: ${{$ctrl.restaurant.average_cost_for_two}}</p>
+    <p>Price Range:<span class="dollars"> {{"$".repeat($ctrl.restaurant.price_range)}}</span ></p>
+    <p>Average Price for Two:<span class="av-price"> ${{$ctrl.restaurant.average_cost_for_two}}</span></p>
   </div>
   <div class="back-button">
     <a href="#!/"><button>Back</button></a>

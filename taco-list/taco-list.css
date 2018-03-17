@@ -1,3 +1,13 @@
+.side-bar-color {
+  background-color: var(--header-lg-color);
+}
+
+.main-content-container {
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: #fff;
+}
+
 .main-header-container {
   background-color: var(--color-block);
 }
@@ -5,7 +15,7 @@
 .main-header {
   font-family: var(--heading-font);
   font-size: var(--header-lg);
-  color: #fff;
+  color: #9BAC5E;
   margin-left: 10%;
 }
 
@@ -13,17 +23,21 @@
   margin-left: 10%;
   font-family: var(--body-font);
   font-size: var(--body-size);
+  color: var(--primary-font-color);
 }
 
 .search {
-  margin-left: 10%;
+  height: 20px;
+  width: 40%;
+  margin: 15px 0 15px 10%;
+  background-color: #F8F8F8;
 }
 
 .card-grid {
   margin: 0 10% 0 10%;
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .taco-card-instance {
