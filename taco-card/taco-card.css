@@ -23,6 +23,7 @@
   grid-column: 1/3;
   grid-row: 1/2;
 }
+
 .information-item {
   font-family: var(--body-font);
   font-size: var(--body-size);
