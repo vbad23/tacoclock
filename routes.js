@@ -5,11 +5,8 @@ angular.module("tacoApp").config(["$routeProvider", function($routeProvider) {
       restaurants: ["RestaurantService", function(RestaurantService) {
         return RestaurantService.fetchRestaurants();
       }]
-    },
-  });
-
-  $routeProvider.when('/restaurant', {
+    }
+  }).when('/taco-restaurant/:id', {
     template: '<taco-restaurant />',
   });
-
 }]);
