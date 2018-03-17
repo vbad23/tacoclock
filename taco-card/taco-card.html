@@ -1,8 +1,9 @@
 <div class="card-container">
+  
   <div class="color-block">
   </div>
   <div class="restaurant-name-container">
-    <p class="information-item ">{{$ctrl.restaurant.restaurant.name}}</p>
+    <p class="information-item "><a href="#!/taco-restaurant/{{$ctrl.restaurant.restaurant.id}}">{{$ctrl.restaurant.restaurant.name}}</a></p>
   </div>
   <div class="restaurant-price-range-container">
     <p class="information-item">Price Range: {{$ctrl.restaurant.restaurant.price_range}}</p>
