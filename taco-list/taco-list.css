@@ -26,7 +26,7 @@
   color: var(--primary-font-color);
 }
 
-.search {
+.search, .location-search {
   height: 20px;
   width: 40%;
   margin: 15px 0 15px 10%;

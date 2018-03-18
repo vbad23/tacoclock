@@ -1,15 +1,23 @@
 <div class="side-bar-color">
 <div class="main-content-container">
 <div class="main-header-container">
-<h1 class="main-header">
+  <h1 class="main-header">
   It's Always Taco Time!
 <h1>
 </div>
 <div class="blurb">
   <p>Find a Taco, and Find Happiness</p>
 </div>
-<div class="Search">
-<input ng-model="$ctrl.search" class="search" placeholder="Search"/>
+<div class="input-fields">
+  <div class="Search">
+  <input ng-model="$ctrl.search" class="search" placeholder="Search"/>
+  </div>
+  <div class="location-search">
+    <form name="form" ng-submit="$ctrl.submit()">
+      <input type="text" ng-model="$ctrl.zip" placeholder="Enter zipcode:" focus-me="focusInput" ng-required="true" name='input'/>
+      <button ng-click="focusInput=true" ng-disabled="form.input.$pristine">SUBMIT</button>
+    </form>
+  </div>
 </div>
 <div class="card-grid">
   <taco-card class="taco-card-instance" restaurant="restaurant" ng-repeat="restaurant in $ctrl.restaurants | filter:$ctrl.search"></taco-card>
