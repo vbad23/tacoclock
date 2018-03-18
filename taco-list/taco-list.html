@@ -1,10 +1,12 @@
+<div class="side-bar-color">
+<div class="main-content-container">
 <div class="main-header-container">
   <h1 class="main-header">
   It's Always Taco Time!
 <h1>
 </div>
 <div class="blurb">
-  <p>Quirky Blurb</p>
+  <p>Find a Taco, and Find Happiness</p>
 </div>
 <div class="input-fields">
   <div class="Search">
@@ -17,6 +19,8 @@
     </form>
   </div>
 </div>
-<div>
-  <taco-card restaurant="restaurant" ng-repeat="restaurant in $ctrl.restaurants | filter:$ctrl.search"></taco-card>
+<div class="card-grid">
+  <taco-card class="taco-card-instance" restaurant="restaurant" ng-repeat="restaurant in $ctrl.restaurants | filter:$ctrl.search"></taco-card>
+</div>
+</div>
 </div>
