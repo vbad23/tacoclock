@@ -1,26 +1,29 @@
 <div class="side-bar-color">
-<div class="main-content-container">
-<div class="main-header-container">
-  <h1 class="main-header">
-  It's Always Taco Time!
-<h1>
-</div>
-<div class="blurb">
-  <p>Find a Taco, and Find Happiness</p>
-</div>
-<div class="input-fields">
-  <div class="Search">
-  <input ng-model="$ctrl.search" class="search" placeholder="Search"/>
+  <div class="main-content-container">
+    <div class="main-header-container">
+      <h1 class="main-header">
+        It's Always Taco Time!
+      <h1>
+    </div>
+    <div class="blurb">
+      <p>Find a Taco, and Find Happiness</p>
+    </div>
+    <div class="input-fields">
+      <div class="location-search">
+        <form name="form" ng-submit="$ctrl.submit()" autocomplete="off">
+          <input type="text" class="search" ng-model="$ctrl.location" placeholder="Your location (Address, Zip, POI...)" id="locationInput" ng-required="true" name='input'/>
+          <button class="submit-button" ng-click="focusInput=true" ng-disabled="form.input.$pristine">SUBMIT</button>
+        </form>
+      </div>
+      <div class="search-filter">
+        <input ng-model="$ctrl.search" class="search" placeholder="Search results"/>
+      </div>
+    </div>
+    <div class="location-display">
+      Showing places near<br>{{$ctrl.locationName}}
+    </div>
+    <div class="card-grid">
+      <taco-card class="taco-card-instance" restaurant="restaurant" ng-repeat="restaurant in $ctrl.restaurants | filter:$ctrl.search"></taco-card>
+    </div>
   </div>
-  <div class="location-search">
-    <form name="form" ng-submit="$ctrl.submit()">
-      <input type="text" ng-model="$ctrl.zip" placeholder="Enter zipcode:" focus-me="focusInput" ng-required="true" name='input'/>
-      <button ng-click="focusInput=true" ng-disabled="form.input.$pristine">SUBMIT</button>
-    </form>
-  </div>
-</div>
-<div class="card-grid">
-  <taco-card class="taco-card-instance" restaurant="restaurant" ng-repeat="restaurant in $ctrl.restaurants | filter:$ctrl.search"></taco-card>
-</div>
-</div>
 </div>
