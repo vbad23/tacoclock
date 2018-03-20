@@ -64,6 +64,10 @@ body {
   background-color: var(--color-block);
 }
 
+.get-directions-container {
+  padding: 5px;
+}
+
 .get-directions-container > a {
   text-decoration: underline;
   color: var(--header-lg-color);
