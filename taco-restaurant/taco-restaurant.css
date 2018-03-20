@@ -73,3 +73,16 @@ body {
   text-decoration: underline;
   color: #516d4e;
 }
+
+.back-button button:hover {
+  background-color: #516d4e;
+}
+
+.back-button button:active {
+  background-color: #6a8e66;
+}
+
+.back-button button:focus {
+  outline: none;
+  border: 2px solid var(--header-lg-color);
+}
