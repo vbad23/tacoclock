@@ -1,4 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
   color: var(--primary-font-color);
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid var(--header-lg-color);
+}
+
+button:hover {
+  background-color: #516d4e;
+}
+
+button:active {
+  background-color: #6a8e66;
+}
+
+button:focus {
+  outline: none;
+  border: 2px solid var(--header-lg-color);
 }

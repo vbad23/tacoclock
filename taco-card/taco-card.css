@@ -9,7 +9,7 @@
 }
 
 .card-container:hover {
-  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   /* -webkit-transform: scale(1.1, 1.1); */
   /* transform: scale(1.1, 1.1); */
   transition: .3s
@@ -71,7 +71,16 @@
   overflow: hidden;
 }
 
-.stars-background-container {
+.stars-foreground-container {
+  position: relative;
   color: #FFC300;
   width: 110px;
+  z-index: 2;
+}
+
+.stars-background-container {
+  position: absolute;
+  color: #f4f4f4;
+  width: 110px;
+  z-index: 1;
 }

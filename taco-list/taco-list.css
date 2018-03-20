@@ -27,7 +27,7 @@
 }
 
 .location-display {
-  margin: 0px 10% 15px 10%;
+  margin: 35px 10% 20px 10%;
   text-align: center;
   font-family: var(--body-font);
   font-size: var(--body-size);
@@ -35,19 +35,41 @@
 }
 
 .search {
-  height: 20px;
-  width: 40%;
-  margin: 15px 0 15px 10%;
+  height: 40px;
+  width: 100%;
+  padding: 10px;
   background-color: #F8F8F8;
+  color: var(--primary-font-color);
+  border: none;
+  font-family: var(--body-font);
+  font-size: 13px;
+  border-radius: 3px;
+}
+
+.location-search {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.location-search input {
+  width: 60%;
+  margin: 15px 0px;
+}
+
+.search-filter {
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .submit-button {
-  margin: 15px 0 15px 10px;
-  border-radius: 2px;
-  width: 150px;
+  height: 40px;
+  min-width: 100px;
+  margin: 0px 0px 0px 10px;
+  border-radius: 3px;
+  width: 20%;
   border: none;
   font-family: var(--body-font);
-  font-size: var(--body-size);
+  font-size: 16px;
   color: var(--header-lg-color);
   background-color: var(--color-block);
 }
