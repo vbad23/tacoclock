@@ -1,36 +1,65 @@
-<div class="restaurant-page">
+<!-- <div class="restaurant-page"> -->
   <div class="restaurant-card">
     <div class="header">
-      Taco Time GR
+      Taco Time
     </div>
-    <div class="restaurant-image">
-      <img src="" alt="">
-    </div>
-    <div class="restaurant-info">
-      <div class="crop">
-        <img class="map"
-          src="https://maps.googleapis.com/maps/api/staticmap?center=
-          {{$ctrl.restaurant.location.latitude}},
-          {{$ctrl.restaurant.location.longitude}}
-          &style=feature:poi.business&zoom=18&markers=color:red%7Clabel:A%7C
-          {{$ctrl.restaurant.location.latitude}},
-          {{$ctrl.restaurant.location.longitude}}
-          &size=640x640&key=AIzaSyBUXrb_kTzurHlE0i8YkFDfgNOUWwcYQ5A">
+    <div class="restaurant-info-container">
+      <div class="restaurant-map">
+        <div class="crop">
+          <img class="map"
+            src="https://maps.googleapis.com/maps/api/staticmap?center=
+            {{$ctrl.restaurant.location.latitude}},
+            {{$ctrl.restaurant.location.longitude}}
+            &style=feature:poi.business&zoom=18&markers=color:red%7Clabel:A%7C
+            {{$ctrl.restaurant.location.latitude}},
+            {{$ctrl.restaurant.location.longitude}}
+            &size=640x640&key=AIzaSyBUXrb_kTzurHlE0i8YkFDfgNOUWwcYQ5A">
+        </div>
       </div>
-      <p class="restaurant-name">{{$ctrl.restaurant.name}}</p>
-      <p>{{$ctrl.restaurant.location.address}}</p>
-      <div class="get-directions-container">
-        <a href="https://www.google.com/maps/dir/?api=1&destination=
-        {{$ctrl.restaurant.location.latitude}},
-        {{$ctrl.restaurant.location.longitude}}"
-        target="_blank">
-          <i class="fas fa-map-marker"></i>  Get Directions with Google Maps</a>
-      </div><br>
-      <p>Price Range:<span class="dollars"> {{"$".repeat($ctrl.restaurant.price_range)}}</span ></p>
-      <p>Average Price for Two:<span class="av-price"> {{$ctrl.restaurant.currency}}{{$ctrl.restaurant.average_cost_for_two}}</span></p>
+      <div class="restaurant-info">
+        <p class="restaurant-name">{{$ctrl.restaurant.name}}</p>
+        <p>{{$ctrl.restaurant.location.address}}</p>
+        <div class="get-directions-container">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=
+          {{$ctrl.restaurant.location.latitude}},
+          {{$ctrl.restaurant.location.longitude}}"
+          target="_blank">
+            <i class="fas fa-map-marker"></i>  Get Directions</a>
+        </div><br>
+        <p>Price Range:<span class="dollars"> {{"$".repeat($ctrl.restaurant.price_range)}}</span ></p>
+        <p>Average Price for Two:<span class="av-price"> {{$ctrl.restaurant.currency}}{{$ctrl.restaurant.average_cost_for_two}}</span></p>
+
+        <!-- Stars -->
+        <div class="restaurant-rating-container-rp" ng-if="$ctrl.restaurant.user_rating.rating_text === 'Not rated'">
+          <p class="information-item-rp">Rating: Not rated</p>
+        </div>
+        <div class="restaurant-rating-container-rp" ng-if="$ctrl.restaurant.user_rating.rating_text !== 'Not rated'">
+          <p class="information-item-rp">Rating:</p>
+          <div class="rating-star-container-rp">
+            <div class="stars-background-container-rp">
+              <span class="fas fa-star"></span>
+              <span class="fas fa-star"></span>
+              <span class="fas fa-star"></span>
+              <span class="fas fa-star"></span>
+              <span class="fas fa-star"></span>
+            </div>
+            <div class="rating-stars-percentage-rp" style="width: {{$ctrl.ratingPercentage()}}%">
+              <div class="stars-foreground-container-rp">
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Stars -->
+
+      </div>
     </div>
     <div class="back-button">
       <a href="#!/"><button>Back</button></a>
     </div>
   </div>
-</div>
+<!-- </div> -->
