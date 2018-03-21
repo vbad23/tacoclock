@@ -3,6 +3,8 @@ angular.module("tacoApp").service("RestaurantService", ["$http", function($http)
   //API Keys
   const zomatoKey = "c3dbbbcffd5c0a6b2d67803c3dcfa4d3";
   const googleGeoKey = "AIzaSyAhXiwRThIxLfgU117A3Z-4g-zKdILrHEc";
+  const googleMapKey = "AIzaSyBu3bGHUw5stOU-dlsJxJ69aIKjP1-oDts";
+  const googleStaticMapKey = "AIzaSyBUXrb_kTzurHlE0i8YkFDfgNOUWwcYQ5A";
 
   // Grand Rapids city center. Shows this by default.
   this.latitude = 42.952141211765;

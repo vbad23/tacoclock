@@ -7,6 +7,16 @@
       <img src="" alt="">
     </div>
     <div class="restaurant-info">
+      <div class="crop">
+        <img class="map"
+          src="https://maps.googleapis.com/maps/api/staticmap?center=
+          {{$ctrl.restaurant.location.latitude}},
+          {{$ctrl.restaurant.location.longitude}}
+          &style=feature:poi.business&zoom=18&markers=color:red%7Clabel:A%7C
+          {{$ctrl.restaurant.location.latitude}},
+          {{$ctrl.restaurant.location.longitude}}
+          &size=640x640&key=AIzaSyBUXrb_kTzurHlE0i8YkFDfgNOUWwcYQ5A">
+      </div>
       <p class="restaurant-name">{{$ctrl.restaurant.name}}</p>
       <p>{{$ctrl.restaurant.location.address}}</p>
       <div class="get-directions-container">
