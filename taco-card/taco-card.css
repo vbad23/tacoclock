@@ -106,3 +106,11 @@
   }
 
 }
+
+@media (max-width: 650px) {
+  .restaurant-name-container > p {
+    font-size: var(--body-size);
+    font-weight: 600;
+    margin-right: 10px;
+  }
+}
