@@ -1,33 +1,36 @@
 <a href="#!/taco-restaurant/{{$ctrl.restaurant.restaurant.id}}">
-<div class="card-container">
-  <div class="color-block">
-  </div>
-  <div class="restaurant-name-container">
-    <p class="information-item">{{$ctrl.restaurant.restaurant.name}}</p>
-  </div>
-  <div class="restaurant-price-range-container">
-    <p class="information-item">Price Range:<span class="dollar-signs"> {{"$".repeat($ctrl.restaurant.restaurant.price_range)}}</span></p>
-  </div>
-  <div class="restaurant-rating-container">
-    <p class="information-item">Rating:</p>
-    <div class="rating-star-container">
-      <div class="stars-background-container">
-      <span class="fas fa-star"></span>
-      <span class="fas fa-star"></span>
-      <span class="fas fa-star"></span>
-      <span class="fas fa-star"></span>
-      <span class="fas fa-star"></span>
-      </div>
-      <div class="rating-stars-percentage" style="width: {{$ctrl.ratingPercentage()}}%">
-        <div class="stars-foreground-container">
-        <span class="fas fa-star"></span>
-        <span class="fas fa-star"></span>
-        <span class="fas fa-star"></span>
-        <span class="fas fa-star"></span>
-        <span class="fas fa-star"></span>
+  <div class="card-container">
+    <div class="color-block">
+    </div>
+    <div class="restaurant-name-container">
+      <p class="information-item">{{$ctrl.restaurant.restaurant.name}}</p>
+    </div>
+    <div class="restaurant-price-range-container">
+      <p class="information-item">Price Range:<span class="dollar-signs"> {{"$".repeat($ctrl.restaurant.restaurant.price_range)}}</span></p>
+    </div>
+    <div class="restaurant-rating-container" ng-if="$ctrl.restaurant.restaurant.user_rating.rating_text === 'Not rated'">
+      <p class="information-item">Rating: Not rated</p>
+    </div>
+    <div class="restaurant-rating-container" ng-if="$ctrl.restaurant.restaurant.user_rating.rating_text !== 'Not rated'">
+      <p class="information-item">Rating:</p>
+      <div class="rating-star-container">
+        <div class="stars-background-container">
+          <span class="fas fa-star"></span>
+          <span class="fas fa-star"></span>
+          <span class="fas fa-star"></span>
+          <span class="fas fa-star"></span>
+          <span class="fas fa-star"></span>
+        </div>
+        <div class="rating-stars-percentage" style="width: {{$ctrl.ratingPercentage()}}%">
+          <div class="stars-foreground-container">
+            <span class="fas fa-star"></span>
+            <span class="fas fa-star"></span>
+            <span class="fas fa-star"></span>
+            <span class="fas fa-star"></span>
+            <span class="fas fa-star"></span>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   </div>
 </a>
