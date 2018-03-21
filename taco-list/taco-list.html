@@ -22,8 +22,15 @@
     <div class="search-filter">
       <input ng-model="$ctrl.search" class="search" placeholder="Filter results"/>
     </div>
+    <div class="dropdown">
+      <select ng-model="$ctrl.sortChoice" ng-options="sort.id as sort.name for sort in $ctrl.sortOptions"></select>
+    </div>
     <div class="card-grid">
-      <taco-card class="taco-card-instance" restaurant="restaurant" ng-repeat="restaurant in $ctrl.restaurants | filter:$ctrl.search"></taco-card>
+      <taco-card
+        class="taco-card-instance"
+        restaurant="restaurant"
+        ng-repeat="restaurant in $ctrl.restaurants | orderBy: $ctrl.sortChoice | filter:$ctrl.search">
+      </taco-card>
     </div>
   </div>
 </div>
