@@ -49,8 +49,7 @@
 }
 
 .location-search {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 0 10%;
 }
 
 .submit-button {
@@ -58,7 +57,6 @@
   min-width: 100px;
   margin: 0px 0px 0px 10px;
   border-radius: 3px;
-
   width: 20%;
   border: none;
   font-family: var(--body-font);
@@ -80,6 +78,7 @@
   margin-right: 10%;
   margin-bottom: 25px;
   width: 100%;
+  /* width: auto; */
 }
 
 .card-grid {
@@ -93,4 +92,28 @@
 .taco-card-instance {
   display: block;
   width: 100%;
+}
+
+@media (max-width: 760px) {
+  .main-header {
+    font-size: 40px;
+  }
+
+  .form {
+    display: block;
+  }
+
+  .search {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .submit-button {
+    margin: 0;
+  }
+
+  .search-filter {
+    width: auto;
+  }
+
 }
