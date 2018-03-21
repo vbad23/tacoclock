@@ -3,27 +3,27 @@
     <div class="main-header-container">
       <h1 class="main-header">
         It's <span class="break">Always </span><span class="break">Taco Time.</span>
-      <h1>
-    </div>
-    <div class="blurb">
-      <p>Find a Taco, Find Happiness</p>
-    </div>
-    <div class="input-fields">
-      <div class="location-search">
-        <form name="form" ng-submit="$ctrl.submit()" autocomplete="off">
-          <input type="text" class="search" ng-model="$ctrl.location" placeholder="Your location (Address, Zip, POI...)" id="locationInput" ng-required="true" name='input'/>
-          <button class="submit-button" ng-click="focusInput=true" ng-disabled="form.input.$pristine">SUBMIT</button>
-        </form>
+        <h1>
+        </div>
+        <div class="blurb">
+          <p>Find a Taco, Find Happiness</p>
+        </div>
+        <div class="input-fields">
+          <div class="location-search">
+            <form class="form" name="form" ng-submit="$ctrl.submit()" autocomplete="off">
+              <input type="text" class="search" ng-model="$ctrl.location" placeholder="Your location (Address, Zip, POI...)" id="locationInput" ng-required="true" name='input'/>
+              <button class="submit-button" ng-click="focusInput=true" ng-disabled="form.input.$pristine">SUBMIT</button>
+            </form>
+          </div>
+        </div>
+        <div class="location-display">
+          Showing results arranged by nearest to<br>{{$ctrl.locationName}}
+        </div>
+        <div class="search-filter">
+          <input ng-model="$ctrl.search" class="search" placeholder="Filter results"/>
+        </div>
+        <div class="card-grid">
+          <taco-card class="taco-card-instance" restaurant="restaurant" ng-repeat="restaurant in $ctrl.restaurants | filter:$ctrl.search"></taco-card>
+        </div>
       </div>
     </div>
-    <div class="location-display">
-      Showing results arranged by nearest to<br>{{$ctrl.locationName}}
-    </div>
-    <div class="search-filter">
-      <input ng-model="$ctrl.search" class="search" placeholder="Filter results"/>
-    </div>
-    <div class="card-grid">
-      <taco-card class="taco-card-instance" restaurant="restaurant" ng-repeat="restaurant in $ctrl.restaurants | filter:$ctrl.search"></taco-card>
-    </div>
-  </div>
-</div>

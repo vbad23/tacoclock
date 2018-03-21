@@ -30,17 +30,14 @@
   color: var(--primary-font-color);
 }
 
-.location-display {
-  margin: 35px 10% 20px 10%;
-  text-align: center;
-  font-family: var(--body-font);
-  font-size: var(--body-size);
-  color: var(--primary-font-color);
+.form {
+  display: flex;
+  justify-content: space-between;
 }
 
 .search {
   height: 40px;
-  width: 100%;
+  width: 80%;
   padding: 10px;
   background-color: #F8F8F8;
   color: var(--primary-font-color);
@@ -55,28 +52,33 @@
   margin-right: 10%;
 }
 
-.location-search input {
-  width: 60%;
-  margin: 15px 0px;
-}
-
-.search-filter {
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 25px;
-}
-
 .submit-button {
   height: 40px;
   min-width: 100px;
   margin: 0px 0px 0px 10px;
   border-radius: 3px;
+
   width: 20%;
   border: none;
   font-family: var(--body-font);
   font-size: 16px;
   color: var(--header-lg-color);
   background-color: var(--color-block);
+}
+
+.location-display {
+  margin: 35px 10% 20px 10%;
+  text-align: center;
+  font-family: var(--body-font);
+  font-size: var(--body-size);
+  color: var(--primary-font-color);
+}
+
+.search-filter {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 25px;
+  width: 100%;
 }
 
 .card-grid {
