@@ -11,12 +11,14 @@
 
 .main-header-container {
   background-color: var(--color-block);
+
 }
 
 .main-header {
   font-family: var(--heading-font);
   font-size: var(--header-lg);
   color: #9BAC5E;
+  padding: 40px 0;
   margin-left: 10%;
 }
 
