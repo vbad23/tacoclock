@@ -2,8 +2,10 @@ angular.module("tacoApp").component("tacoList", {
   templateUrl: "taco-list/taco-list.html",
   controller: ['RestaurantService', function(RestaurantService) {
 
-    // this.sortList = ["Nearest Location", "Highest Rating", "Lowest Price"];
+    this.restaurants = [];
+    document.getElementById("locationInput").focus();
 
+    // Sort selector
     this.sortChoice = "";
     this.sortOptions = [
       {
@@ -19,11 +21,6 @@ angular.module("tacoApp").component("tacoList", {
         name: "Lowest Price"
       }
     ];
-
-    // this.sortMethod = this.sortList[0];
-
-    this.restaurants = [];
-    document.getElementById("locationInput").focus();
 
     // Gets Location and Restaurants from Service
     RestaurantService.fetchRestaurants(RestaurantService.latitude, RestaurantService.longitude).then(
