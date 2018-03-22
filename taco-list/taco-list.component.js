@@ -35,15 +35,19 @@ angular.module("tacoApp").component("tacoList", {
       RestaurantService.fetchCoordinates(this.location).then(
         coordinates => {
           this.coordinates = coordinates;
-          RestaurantService.locationName = this.coordinates.results[0].formatted_address;
-          RestaurantService.latitude = this.coordinates.results[0].geometry.location.lat;
-          RestaurantService.longitude = this.coordinates.results[0].geometry.location.lng;
-          RestaurantService.fetchRestaurants().then(
-            restaurants => {
-              this.restaurants = restaurants;
-              this.locationName = RestaurantService.locationName;
-            }
-          );
+          if (this.coordinates.status === "ZERO_RESULTS") {
+            this.locationName = "No results found. Please try another search.";
+          } else {
+            RestaurantService.locationName = this.coordinates.results[0].formatted_address;
+            RestaurantService.latitude = this.coordinates.results[0].geometry.location.lat;
+            RestaurantService.longitude = this.coordinates.results[0].geometry.location.lng;
+            RestaurantService.fetchRestaurants().then(
+              restaurants => {
+                this.restaurants = restaurants;
+                this.locationName = RestaurantService.locationName;
+              }
+            );
+          }
         }
       );
     }
