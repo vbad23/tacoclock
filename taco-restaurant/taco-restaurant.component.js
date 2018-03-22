@@ -1,6 +1,9 @@
 angular.module("tacoApp").component("tacoRestaurant", {
   templateUrl: "taco-restaurant/taco-restaurant.html",
   controller: ['RestaurantService', "$routeParams", function(RestaurantService, $routeParams) {
+    this.loading = true;
+    this.loaded = false;
+    this.mapImage = document.querySelector("img");
 
     // Uses the page route to get the restaurant information
     RestaurantService.fetchRestaurant($routeParams.id).then(
@@ -14,6 +17,10 @@ angular.module("tacoApp").component("tacoRestaurant", {
               this.address[1] = this.address[1] + ", " + this.address[i + 1];
             }
           }
+        }
+        if (this.mapImage.complete) {
+          this.loading = false;
+          this.loaded = true;
         }
       }
     );

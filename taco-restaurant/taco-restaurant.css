@@ -2,6 +2,39 @@ body {
   background-color: var(--header-lg-color);
 }
 
+.loader {
+  background: rgb(238, 192, 27);
+  position: absolute;
+  height: 75px;
+  width: 150px;
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+  left: 50%;
+  top: 15%;
+  margin-left: -75px;
+  animation: 1s linear infinite rotate;
+  transform-origin: 50% 100%;
+  border: 1px solid #000;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+.loadingText {
+  font-size: var(--header-med);
+  font-family: var(--heading-font);
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  margin: 0 0 0 -113px;
+}
+
 .restaurant-card {
   background-color: #FFF;
   border-radius: 2px;

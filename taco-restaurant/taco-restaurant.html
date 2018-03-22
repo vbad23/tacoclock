@@ -1,10 +1,13 @@
-<div class="restaurant-page">
+<div ng-show=$ctrl.loading>
+  <div class="loadingText">
+    LOADING TACOS!
+  </div>
+  <div class="loader"></div>
+</div>
+<div class="restaurant-page animate-show" ng-show=$ctrl.loaded>
   <div class="restaurant-card">
     <div class="header">
       Taco Time GR
-    </div>
-    <div class="restaurant-image">
-      <img src="" alt="">
     </div>
     <div class="restaurant-info">
       <div class="crop">
