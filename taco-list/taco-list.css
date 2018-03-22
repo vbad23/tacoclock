@@ -51,7 +51,19 @@
 }
 
 .location-search {
+
   margin: 0 10%;
+}
+
+.location-search input {
+  width: 60%;
+  margin: 15px 0px;
+}
+
+.search-filter, .dropdown {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 25px;
 }
 
 .submit-button {

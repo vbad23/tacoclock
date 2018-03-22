@@ -5,6 +5,23 @@ angular.module("tacoApp").component("tacoList", {
     this.restaurants = [];
     document.getElementById("locationInput").focus();
 
+    // Sort selector
+    this.sortChoice = "";
+    this.sortOptions = [
+      {
+        id: "",
+        name: "Nearest Location"
+      },
+      {
+        id: "-restaurant.user_rating.aggregate_rating",
+        name: "Highest Rating"
+      },
+      {
+        id: "restaurant.price_range",
+        name: "Lowest Price"
+      }
+    ];
+
     // Gets Location and Restaurants from Service
     RestaurantService.fetchRestaurants(RestaurantService.latitude, RestaurantService.longitude).then(
       restaurants => {
