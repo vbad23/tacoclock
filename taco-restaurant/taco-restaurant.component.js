@@ -1,7 +1,7 @@
 angular.module("tacoApp").component("tacoRestaurant", {
   templateUrl: "taco-restaurant/taco-restaurant.html",
   controller: ['RestaurantService', "$routeParams", function(RestaurantService, $routeParams) {
-    this.stringer = "Yo, what's going on? I dunno, you, are?";
+
     // Uses the page route to get the restaurant information
     RestaurantService.fetchRestaurant($routeParams.id).then(
       restaurant => {
