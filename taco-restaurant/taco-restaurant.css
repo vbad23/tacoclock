@@ -6,6 +6,11 @@ body {
   background-color: var(--header-lg-color);
 }
 
+.restaurant-page {
+  display: flex;
+  align-items: center;
+}
+
 .restaurant-card {
   display: flex;
   flex-direction: column;
@@ -202,4 +207,40 @@ body {
   .restaurant-info {
     font-size: 14px;
   }
+
+  .restaurant-name {
+    font-size: 34px;
+  }
+
+  .rating-star-container-rp {
+    width: 100px;
+  }
+
+  .stars-foreground-container-rp {
+    width: 100px;
+  }
+
+  .stars-background-container-rp {
+    width: 100px;
+  }
+}
+
+@media (max-width: 415px) {
+  .restaurant-card {
+    width: 100%;
+    /* height: 100vh; */
+    margin: 0 auto;
+  }
+
+  .restaurant-card .header {
+    padding: 10px;
+  }
+
+  /* .restaurant-info-container {
+    height: auto;
+  }
+
+  .back-button {
+    margin: auto 35px 30px 35px;
+  } */
 }
