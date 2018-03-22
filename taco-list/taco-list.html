@@ -16,7 +16,10 @@
             </form>
           </div>
         </div>
-        <div class="location-display">
+        <div class="location-loader" ng-show="$ctrl.searching">
+
+        </div>
+        <div class="location-display" ng-show=$ctrl.finished>
           Showing the nearest locations for:<br>{{$ctrl.locationName}}
         </div>
         <div class="search-filter">

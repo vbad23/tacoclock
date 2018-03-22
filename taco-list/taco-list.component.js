@@ -2,6 +2,19 @@ angular.module("tacoApp").component("tacoList", {
   templateUrl: "taco-list/taco-list.html",
   controller: ['RestaurantService', function(RestaurantService) {
 
+    this.finished = false;
+    this.searching = true;
+
+    function loading() {
+      this.finished = false;
+      this.searching = true;
+    }
+
+    function doneLoading() {
+      this.searching = false;
+      this.finished = true;
+    }
+
     this.restaurants = [];
     document.getElementById("locationInput").focus();
 
@@ -27,16 +40,22 @@ angular.module("tacoApp").component("tacoList", {
       restaurants => {
         this.restaurants = restaurants;
         this.locationName = RestaurantService.locationName;
+        this.searching = false;
+        this.finished = true;
       }
     );
 
     // Location Input Submit
     this.submit = function() {
+      this.finished = false;
+      this.searching = true;
       RestaurantService.fetchCoordinates(this.location).then(
         coordinates => {
           this.coordinates = coordinates;
           if (this.coordinates.status === "ZERO_RESULTS") {
             this.locationName = "No results found. Please try another search.";
+            this.searching = false;
+            this.finished = true;
           } else {
             RestaurantService.locationName = this.coordinates.results[0].formatted_address;
             RestaurantService.latitude = this.coordinates.results[0].geometry.location.lat;
@@ -45,6 +64,8 @@ angular.module("tacoApp").component("tacoList", {
               restaurants => {
                 this.restaurants = restaurants;
                 this.locationName = RestaurantService.locationName;
+                this.searching = false;
+                this.finished = true;
               }
             );
           }
