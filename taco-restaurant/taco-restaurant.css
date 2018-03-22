@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 body {
   background-color: var(--header-lg-color);
 }
@@ -22,6 +26,8 @@ body {
   background-color: var(--color-block);
 }
 
+/* Grid Set-Up */
+
 .restaurant-info-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -41,13 +47,18 @@ body {
   font-family: var(--body-font);
   color: var(--primary-font-color);
   font-size: 17px;
+  line-height: 2;
 }
+
+/* Restaurant Info Styling */
 
 .restaurant-name {
   color: var(--header-lg-color);
   font-family: var(--heading-font);
   font-size: 42px;
   margin: 0px;
+  margin-bottom: 15px;
+  line-height: normal;
 }
 
 .dollars {
@@ -56,27 +67,6 @@ body {
 }
 
 .av-price {
-  padding: 5px;
-}
-
-.back-button {
-  align-items: center;
-  justify-content: center;
-  margin: 20px;
-}
-
-.back-button button {
-  border-radius: 2px;
-  width: 100%;
-  padding: 10px;
-  border: none;
-  font-family: var(--body-font);
-  font-size: var(--body-size);
-  color: var(--header-lg-color);
-  background-color: var(--color-block);
-}
-
-.get-directions-container {
   padding: 5px;
 }
 
@@ -90,18 +80,7 @@ body {
   color: #516d4e;
 }
 
-.back-button button:hover {
-  background-color: #516d4e;
-}
-
-.back-button button:active {
-  background-color: #6a8e66;
-}
-
-.back-button button:focus {
-  outline: none;
-  border: 2px solid var(--header-lg-color);
-}
+/* Map Styling */
 
 .crop {
   margin-left: auto;
@@ -118,7 +97,6 @@ body {
     width: 100%;
 }
 
-
 /* Stars styling */
 
 .restaurant-rating-container-rp {
@@ -129,7 +107,7 @@ body {
 .rating-star-container-rp {
   position: relative;
   width: 115px;
-  padding: 15px;
+  margin-left: 10px;
 }
 
 .rating-stars-percentage-rp {
@@ -148,4 +126,80 @@ body {
   color: #f4f4f4;
   width: 115px;
   z-index: 1;
+}
+
+
+/* Back Button Styling */
+
+.back-button {
+  align-items: center;
+  justify-content: center;
+  margin: 0 50px 30px 50px;
+}
+
+.back-button button {
+  border-radius: 2px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  font-family: var(--body-font);
+  font-size: 18px;
+  color: var(--header-lg-color);
+  background-color: var(--color-block);
+}
+
+
+.back-button button:hover {
+  background-color: #516d4e;
+}
+
+.back-button button:active {
+  background-color: #6a8e66;
+}
+
+.back-button button:focus {
+  outline: none;
+  border: 2px solid var(--header-lg-color);
+}
+
+@media (max-width: 960px) {
+  .restaurant-info-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 60%;
+    margin: 0px;
+  }
+
+  .restaurant-map {
+    margin: 0px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .crop {
+    margin: 0;
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 300px;
+  }
+
+  .crop .map {
+      height: 100%;
+      width: 100%;
+  }
+
+  .restaurant-info {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: 25px 35px;
+  }
+
+  .back-button {
+    margin: 0 35px 30px 35px;
+  }
+
+@media (max-width: 460px) {
+  .restaurant-info {
+    font-size: 14px;
+  }
 }
