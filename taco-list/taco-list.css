@@ -36,6 +36,7 @@
 .form {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .search {
@@ -51,12 +52,11 @@
 }
 
 .location-search {
-
   margin: 0 10%;
 }
 
 .location-search input {
-  width: 60%;
+  width: 80%;
   margin: 15px 0px;
 }
 
@@ -122,6 +122,10 @@
     margin-bottom: 10px;
   }
 
+  .location-search input {
+    width: 100%;
+  }
+
   .submit-button {
     margin: 0;
   }
@@ -129,7 +133,7 @@
   .search-filter {
     width: auto;
   }
-
+  
 }
 
 @media (max-width: 650px) {
