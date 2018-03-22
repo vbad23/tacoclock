@@ -84,3 +84,33 @@
   width: 110px;
   z-index: 1;
 }
+
+@media (max-width: 720px) {
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content:
+  }
+
+  .restaurant-name-container {
+    padding: 5px 0;
+    margin-top: 5px;
+  }
+
+  .information-item {
+    align-items: center;
+  }
+
+  .not-rated {
+    padding: 10px 0;
+  }
+
+}
+
+@media (max-width: 650px) {
+  .restaurant-name-container > p {
+    font-size: var(--body-size);
+    font-weight: 600;
+    margin-right: 10px;
+  }
+}
