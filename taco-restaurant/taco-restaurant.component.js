@@ -6,6 +6,15 @@ angular.module("tacoApp").component("tacoRestaurant", {
     RestaurantService.fetchRestaurant($routeParams.id).then(
       restaurant => {
         this.restaurant = restaurant;
+        this.address = this.restaurant.location.address.split(",");
+        if (this.address.length > 2) {
+          this.address.push(" ");
+          for (var i = 1; i < this.address.length - 1; i++) {
+            if (this.address[i + 1] !== " ") {
+              this.address[1] = this.address[1] + ", " + this.address[i + 1];
+            }
+          }
+        }
       }
     );
   }]

@@ -18,7 +18,8 @@
           &size=640x640&key=AIzaSyBUXrb_kTzurHlE0i8YkFDfgNOUWwcYQ5A">
       </div>
       <p class="restaurant-name">{{$ctrl.restaurant.name}}</p>
-      <p>{{$ctrl.restaurant.location.address}}</p>
+      <p>{{$ctrl.address[0]}},</p>
+      <p>{{$ctrl.address[1]}}</p>
       <div class="get-directions-container">
         <a href="https://www.google.com/maps/dir/?api=1&destination=
         {{$ctrl.restaurant.location.latitude}},
