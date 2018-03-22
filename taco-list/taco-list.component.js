@@ -5,16 +5,6 @@ angular.module("tacoApp").component("tacoList", {
     this.finished = false;
     this.searching = true;
 
-    function loading() {
-      this.finished = false;
-      this.searching = true;
-    }
-
-    function doneLoading() {
-      this.searching = false;
-      this.finished = true;
-    }
-
     this.restaurants = [];
     document.getElementById("locationInput").focus();
 
