@@ -243,12 +243,8 @@ html, body {
 
   .restaurant-card {
     width: 100%;
-    /* height: 100vh; */
     height: 100%;
     box-shadow: none;
-    /* height: 100%;
-    height: 100vh;
-    margin: 0 auto; */
   }
 
   .restaurant-card .header {
@@ -258,16 +254,4 @@ html, body {
   .back-button {
     margin: auto 35px 35px 35px;
   }
-
-  /* .restaurant-info {
-    height: 100%;
-  }
-
-  .restaurant-info-container {
-    height: auto;
-  }
-
-  .back-button {
-    margin: auto 35px 30px 35px;
-  } */
 }
