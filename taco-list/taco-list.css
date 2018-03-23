@@ -124,6 +124,11 @@
 }
 
 @media (max-width: 760px) {
+
+  .main-content-container {
+    margin: 0 5%;
+  }
+
   .main-header {
     font-size: 40px;
   }
