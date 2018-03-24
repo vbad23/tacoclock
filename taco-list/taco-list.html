@@ -11,7 +11,9 @@
         <div class="input-fields">
           <div class="location-search">
             <form class="form" name="form" ng-submit="$ctrl.submit()" autocomplete="off">
-              <input type="text" class="search" ng-model="$ctrl.location" placeholder="Your location (Address, Zip, POI...)" id="locationInput" ng-required="true" name='input'/>
+              <label class="label">Your location
+                <input type="text" class="search" ng-model="$ctrl.location" placeholder="Address, Zip, POI" id="locationInput" ng-required="true" name='input'/>
+              </label>
               <button class="submit-button" ng-click="focusInput=true" ng-disabled="form.input.$pristine">SUBMIT</button>
             </form>
           </div>
@@ -23,7 +25,9 @@
           Showing the nearest locations for:<br>{{$ctrl.locationName}}
         </div>
         <div class="search-filter">
-          <input ng-model="$ctrl.search" class="search" placeholder="Filter results"/>
+          <label class="label">Filter
+            <input ng-model="$ctrl.search" class="search filter-input"/>
+          </label>
         </div>
         <div class="dropdown">
           <select ng-model="$ctrl.sortChoice" ng-options="sort.id as sort.name for sort in $ctrl.sortOptions"></select>

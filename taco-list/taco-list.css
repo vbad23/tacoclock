@@ -55,9 +55,20 @@
   align-items: center;
 }
 
+.label {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: 100%;
+  font-family: var(--body-font);
+  font-size: var(--body-size);
+  color: var(--primary-font-color);
+}
+
 .search {
   height: 40px;
   width: 80%;
+  margin-left: 15px;
   padding: 10px;
   background-color: #F8F8F8;
   color: var(--primary-font-color);
@@ -65,6 +76,10 @@
   font-family: var(--body-font);
   font-size: 13px;
   border-radius: 3px;
+}
+
+.filter-input {
+  width: 100%;
 }
 
 .location-search {
@@ -103,6 +118,8 @@
 }
 
 .search-filter {
+  /* display: flex;
+  align-items: center; */
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 25px;
