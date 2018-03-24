@@ -1,2 +1,2 @@
 # tacoclock
-Find tacos in Grand Rapids!
+Find tacos around the world!
