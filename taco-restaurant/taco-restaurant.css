@@ -229,15 +229,16 @@ html, body {
     overflow: hidden;
     max-width: 100%;
     max-height: 300px;
+    border: none;
+  }
+
+  .crop:hover {
+    border: none;
   }
 
   .crop .map-click {
       height: 100%;
       width: 100%;
-  }
-
-  .map {
-    border: none;
   }
 
   .restaurant-info {
