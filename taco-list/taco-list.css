@@ -1,3 +1,18 @@
+.location-loader {
+    margin: 27px auto;
+    border: 7px solid #F3F3F3;
+    border-top: 7px solid var(--header-lg-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 .side-bar-color {
   background-color: var(--header-lg-color);
 }
@@ -6,17 +21,24 @@
   margin-left: 10%;
   margin-right: 10%;
   background-color: #fff;
+  box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.2);
 }
 
 .main-header-container {
   background-color: var(--color-block);
+
 }
 
 .main-header {
   font-family: var(--heading-font);
   font-size: var(--header-lg);
   color: #9BAC5E;
+  padding: 40px 0;
   margin-left: 10%;
+}
+
+.break {
+  display: table;
 }
 
 .blurb {
@@ -26,17 +48,15 @@
   color: var(--primary-font-color);
 }
 
-.location-display {
-  margin: 35px 10% 20px 10%;
-  text-align: center;
-  font-family: var(--body-font);
-  font-size: var(--body-size);
-  color: var(--primary-font-color);
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .search {
   height: 40px;
-  width: 100%;
+  width: 80%;
   padding: 10px;
   background-color: #F8F8F8;
   color: var(--primary-font-color);
@@ -47,18 +67,16 @@
 }
 
 .location-search {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 0 10%;
 }
 
 .location-search input {
-  width: 60%;
+  width: 80%;
   margin: 15px 0px;
 }
 
 .search-filter, .dropdown {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 0 10%;
   margin-bottom: 25px;
 }
 
@@ -75,9 +93,25 @@
   background-color: var(--color-block);
 }
 
+.location-display {
+  margin: 35px 10% 20px 10%;
+  text-align: center;
+  font-family: var(--body-font);
+  font-size: var(--body-size);
+  color: var(--primary-font-color);
+}
+
+.search-filter {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 25px;
+  width: 100%;
+  /* width: auto; */
+}
+
 .card-grid {
   padding-bottom: 40px;
-  margin: 0 10% 5% 10%;
+  margin: 0 10% 20px 10%;
   display: grid;
   grid-gap: 30px;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -86,4 +120,56 @@
 .taco-card-instance {
   display: block;
   width: 100%;
+}
+
+.footer {
+  text-align: center;
+  font-family: var(--body-font);
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+@media (max-width: 760px) {
+
+  .main-content-container {
+    margin: 0 5%;
+  }
+
+  .main-header {
+    font-size: 40px;
+  }
+
+  .form {
+    display: block;
+  }
+
+  .search {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .location-search input {
+    width: 100%;
+  }
+
+  .submit-button {
+    margin: 0;
+  }
+
+  .search-filter {
+    width: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .footer {
+    font-size: 10px;
+    margin: -10px 5% 10px 5%;
+  }
 }

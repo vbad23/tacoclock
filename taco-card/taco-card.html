@@ -6,10 +6,13 @@
       <p class="information-item">{{$ctrl.restaurant.restaurant.name}}</p>
     </div>
     <div class="restaurant-price-range-container">
-      <p class="information-item">Price Range:<span class="dollar-signs"> {{"$".repeat($ctrl.restaurant.restaurant.price_range)}}</span></p>
+      <p class="information-item">Price Range:
+        <span class="dollar-signs"> {{"$".repeat($ctrl.restaurant.restaurant.price_range)}}</span>
+        <span class="dollar-signs-empty"> {{"$".repeat(4 - $ctrl.restaurant.restaurant.price_range)}}</span>
+      </p>
     </div>
     <div class="restaurant-rating-container" ng-if="$ctrl.restaurant.restaurant.user_rating.rating_text === 'Not rated'">
-      <p class="information-item">Rating: Not rated</p>
+      <p class="information-item">Rating: <span class="rating-star-container">Not rated</span></p>
     </div>
     <div class="restaurant-rating-container" ng-if="$ctrl.restaurant.restaurant.user_rating.rating_text !== 'Not rated'">
       <p class="information-item">Rating:</p>
