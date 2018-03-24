@@ -51,7 +51,6 @@
 
 .form {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -59,10 +58,15 @@
   display: flex;
   align-items: center;
   white-space: nowrap;
-  width: 100%;
   font-family: var(--body-font);
-  font-size: var(--body-size);
+  font-size: 13px;
   color: var(--primary-font-color);
+}
+
+.input-button-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .search {
@@ -78,6 +82,10 @@
   border-radius: 3px;
 }
 
+.address-search {
+  width: 100%;
+}
+
 .filter-input {
   width: 100%;
 }
@@ -88,18 +96,12 @@
 
 .location-search input {
   width: 80%;
-  margin: 15px 0px;
-}
-
-.search-filter, .dropdown {
-  margin: 0 10%;
-  margin-bottom: 25px;
+  margin: 15px;
 }
 
 .submit-button {
   height: 40px;
   min-width: 100px;
-  margin: 0px 0px 0px 10px;
   border-radius: 3px;
   width: 20%;
   border: none;
@@ -118,15 +120,22 @@
 }
 
 .search-filter {
-  /* display: flex;
-  align-items: center; */
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 25px;
-  width: 100%;
-  /* width: auto; */
+  display: flex;
+  align-items: center;
 }
 
+.search-filter, .dropdown {
+  margin: 0 10%;
+  margin-bottom: 25px;
+}
+
+.search-filter .label {
+  /* width: 50px; */
+  /* padding-right: 15px; */
+}
 .card-grid {
   padding-bottom: 40px;
   margin: 0 10% 20px 10%;
@@ -147,6 +156,32 @@
   color: #000;
   margin-bottom: 20px;
   opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  .form {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; */
+  }
+
+  .location-search input {
+    margin: 0 0 0 15px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .label {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  .submit-button {
+    /* width: 100%; */
+    margin-left: 15px;
+  }
 }
 
 @media (max-width: 760px) {
