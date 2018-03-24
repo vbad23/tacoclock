@@ -134,6 +134,11 @@ html, body {
   overflow: hidden;
   max-width: 600px;
   max-height: 300px;
+  border: 2px solid var(--primary-font-color);
+}
+
+.crop:hover {
+  border: 2px solid var(--header-lg-color);
 }
 
 .crop .map {
@@ -226,9 +231,13 @@ html, body {
     max-height: 300px;
   }
 
-  .crop .map {
+  .crop .map-click {
       height: 100%;
       width: 100%;
+  }
+
+  .map {
+    border: none;
   }
 
   .restaurant-info {
