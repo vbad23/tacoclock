@@ -48,6 +48,7 @@
 
 .dollar-signs-empty{
   padding: 15px 0px 15px 0px;
+  color: var(--greyed-out);
 }
 
 .restaurant-price-range-container {
@@ -83,7 +84,7 @@
 
 .stars-background-container {
   position: absolute;
-  color: #f4f4f4;
+  color: var(--greyed-out);
   width: 110px;
   z-index: 1;
 }

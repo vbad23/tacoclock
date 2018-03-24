@@ -107,6 +107,7 @@ html, body {
 
 .dollar-signs-empty {
   padding: 5px 5px 5px 0px;
+  color: var(--greyed-out);
 }
 
 .av-price {
@@ -171,7 +172,7 @@ html, body {
 
 .stars-background-container-rp {
   position: absolute;
-  color: #f4f4f4;
+  color: var(--greyed-out);
   width: 115px;
   z-index: 1;
 }
