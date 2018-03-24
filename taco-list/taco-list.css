@@ -42,22 +42,38 @@
 }
 
 .blurb {
-  margin-top: 30px;
-  margin-left: 10%;
+  margin: 30px 10%;
+  /* margin-top: 30px;
+  margin-left: 10%; */
   font-family: var(--body-font);
   font-size: var(--body-size);
-  color: var(--primary-font-color);
+  color: var(--color-block);
 }
 
 .form {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-family: var(--body-font);
+  font-size: 13px;
+  color: var(--primary-font-color);
+}
+
+.input-button-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .search {
   height: 40px;
   width: 80%;
+  margin-left: 15px;
   padding: 10px;
   background-color: #F8F8F8;
   color: var(--primary-font-color);
@@ -67,24 +83,26 @@
   border-radius: 3px;
 }
 
+.address-search {
+  width: 100%;
+}
+
+.filter-input {
+  width: 100%;
+}
+
 .location-search {
   margin: 0 10%;
 }
 
 .location-search input {
   width: 80%;
-  margin: 15px 0px;
-}
-
-.search-filter, .dropdown {
-  margin: 0 10%;
-  margin-bottom: 25px;
+  margin: 15px;
 }
 
 .submit-button {
   height: 40px;
   min-width: 100px;
-  margin: 0px 0px 0px 10px;
   border-radius: 3px;
   width: 20%;
   border: none;
@@ -106,8 +124,13 @@
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 25px;
-  width: 100%;
-  /* width: auto; */
+  display: flex;
+  align-items: center;
+}
+
+.search-filter, .dropdown {
+  margin: 0 10%;
+  margin-bottom: 25px;
 }
 
 .card-grid {
@@ -132,6 +155,37 @@
   opacity: 0.7;
 }
 
+@media (max-width: 1024px) {
+
+  .form {
+    display: block;
+  }
+
+  .location-search input {
+    margin: 0 15px 0 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .label {
+    margin: 10px 0;
+  }
+
+  .address-search {
+    margin: 0;
+  }
+
+  .search-filter {
+    display: block;
+  }
+
+  .filter-input {
+    margin: 0;
+
+  }
+
+}
+
 @media (max-width: 760px) {
 
   .main-content-container {
@@ -143,7 +197,7 @@
     line-height: 45px;
   }
 
-  .form {
+  .input-button-container {
     display: block;
   }
 
@@ -154,10 +208,12 @@
 
   .location-search input {
     width: 100%;
+    margin-bottom: 10px;
   }
 
   .submit-button {
     margin: 0;
+    width: 100%;
   }
 
   .search-filter {
