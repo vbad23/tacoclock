@@ -42,11 +42,12 @@
 }
 
 .blurb {
-  margin-top: 30px;
-  margin-left: 10%;
+  margin: 30px 10%;
+  /* margin-top: 30px;
+  margin-left: 10%; */
   font-family: var(--body-font);
   font-size: var(--body-size);
-  color: var(--primary-font-color);
+  color: var(--color-block);
 }
 
 .form {
@@ -132,10 +133,6 @@
   margin-bottom: 25px;
 }
 
-.search-filter .label {
-  /* width: 50px; */
-  /* padding-right: 15px; */
-}
 .card-grid {
   padding-bottom: 40px;
   margin: 0 10% 20px 10%;
@@ -159,29 +156,34 @@
 }
 
 @media (max-width: 1024px) {
+
   .form {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; */
+    display: block;
   }
 
   .location-search input {
-    margin: 0 0 0 15px;
+    margin: 0 15px 0 0;
     width: 100%;
     text-align: left;
   }
 
   .label {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0;
+    margin: 10px 0;
   }
 
-  .submit-button {
-    /* width: 100%; */
-    margin-left: 15px;
+  .address-search {
+    margin: 0;
   }
+
+  .search-filter {
+    display: block;
+  }
+
+  .filter-input {
+    margin: 0;
+
+  }
+
 }
 
 @media (max-width: 760px) {
@@ -195,7 +197,7 @@
     line-height: 45px;
   }
 
-  .form {
+  .input-button-container {
     display: block;
   }
 
@@ -206,10 +208,12 @@
 
   .location-search input {
     width: 100%;
+    margin-bottom: 10px;
   }
 
   .submit-button {
     margin: 0;
+    width: 100%;
   }
 
   .search-filter {
