@@ -97,7 +97,7 @@ html, body {
   font-size: 42px;
   margin: 0px;
   margin-bottom: 15px;
-  line-height: normal;
+  line-height: 48px;
 }
 
 .dollar-signs {
@@ -190,7 +190,6 @@ html, body {
   color: var(--header-lg-color);
   background-color: var(--color-block);
 }
-
 
 .back-button button:hover {
   background-color: #516d4e;
