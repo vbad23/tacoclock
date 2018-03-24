@@ -8,5 +8,7 @@ angular.module("tacoApp").config(["$routeProvider", function($routeProvider) {
     }
   }).when('/taco-restaurant/:id', {
     template: '<taco-restaurant />',
+  }).when('/404', {
+    template: '<error-page />',
   });
 }]);
