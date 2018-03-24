@@ -12,18 +12,18 @@
     <div class="restaurant-info-container">
       <div class="restaurant-map">
         <div class="crop">
-          <img class="map"
+          <a class="map-click" href="https://www.google.com/maps/@{{$ctrl.restaurant.location.latitude}},{{$ctrl.restaurant.location.longitude}},17z" target="_blank"><img class="map"
             src="https://maps.googleapis.com/maps/api/staticmap?center=
             {{$ctrl.restaurant.location.latitude}},
             {{$ctrl.restaurant.location.longitude}}
             &style=feature:poi.business&zoom=18&markers=color:red%7Clabel:A%7C
             {{$ctrl.restaurant.location.latitude}},
             {{$ctrl.restaurant.location.longitude}}
-            &size=640x640&key=AIzaSyBUXrb_kTzurHlE0i8YkFDfgNOUWwcYQ5A">
+            &size=640x640&key=AIzaSyBUXrb_kTzurHlE0i8YkFDfgNOUWwcYQ5A"></a>
         </div>
       </div>
       <div class="restaurant-info">
-        
+
         <p class="restaurant-name">{{$ctrl.restaurant.name}}</p>
         <p>{{$ctrl.address[0]}},</p>
         <p>{{$ctrl.address[1]}}</p>
