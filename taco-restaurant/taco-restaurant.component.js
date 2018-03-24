@@ -9,10 +9,11 @@ angular.module("tacoApp").component("tacoRestaurant", {
     RestaurantService.fetchRestaurant($routeParams.id).then(
       restaurant => {
         this.restaurant = restaurant;
-        
+
         this.ratingPercentage = function() {
           return this.restaurant.user_rating.aggregate_rating / 5 * 100;
-          
+        }
+
         this.address = this.restaurant.location.address.split(",");
         if (this.address.length > 2) {
           this.address.push(" ");

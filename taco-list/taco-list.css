@@ -42,6 +42,7 @@
 }
 
 .blurb {
+  margin-top: 30px;
   margin-left: 10%;
   font-family: var(--body-font);
   font-size: var(--body-size);
