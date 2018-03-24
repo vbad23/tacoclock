@@ -20,7 +20,7 @@ angular.module("tacoApp").component("tacoList", {
         name: "Highest Rating"
       },
       {
-        id: "restaurant.price_range",
+        id: "restaurant.average_cost_for_two",
         name: "Lowest Price"
       }
     ];
