@@ -37,6 +37,17 @@
   margin-left: 10%;
 }
 
+.main-header .image {
+  
+}
+
+.main-header .taco-img {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+  position: absolute;
+}
+
 .break {
   display: table;
 }
