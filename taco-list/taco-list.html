@@ -12,36 +12,38 @@
           <div class="location-search">
             <form class="form" name="form" ng-submit="$ctrl.submit()" autocomplete="off">
               <label class="label">Your location  </label>
-                <div class="input-button-container">
-                  <input type="text" class="search address-search" ng-model="$ctrl.location" placeholder="Address, Zip, POI" id="locationInput" ng-required="true" name='input'/>
-                  <button class="submit-button" ng-click="focusInput=true" ng-disabled="form.input.$pristine">SUBMIT</button>
-                </div>
+              <div class="input-button-container">
+                <input type="text" class="search address-search" ng-model="$ctrl.location" placeholder="Address, Zip, POI" id="locationInput" ng-required="true" name='input'/>
+                <button class="submit-button" ng-click="focusInput=true" ng-disabled="form.input.$pristine">SUBMIT</button>
+              </div>
             </form>
           </div>
         </div>
-      <div class="location-loader" ng-show="$ctrl.searching">
+        <div class="location-loader" ng-show="$ctrl.searching">
 
-      </div>
-      <div class="location-display" ng-show=$ctrl.finished>
-        Showing the nearest locations for:<br>{{$ctrl.locationName}}
-      </div>
-      <div class="search-filter">
-        <label class="label">Filter</label>
+        </div>
+        <div class="location-display" ng-show=$ctrl.finished>
+          Showing the nearest locations for:<br>{{$ctrl.locationName}}
+        </div>
+        <div class="search-filter">
+          <label class="label">Filter</label>
           <input ng-model="$ctrl.search" class="search filter-input"/>
+        </div>
+        <div class="dropdown">
+          <select ng-model="$ctrl.sortChoice" ng-options="sort.id as sort.name for sort in $ctrl.sortOptions"></select>
+        </div>
+        <div class="card-grid">
+          <taco-card
+          class="taco-card-instance"
+          restaurant="restaurant"
+          ng-repeat="restaurant in $ctrl.restaurants | orderBy: $ctrl.sortChoice | filter:$ctrl.search">
+        </taco-card>
       </div>
-      <div class="dropdown">
-        <select ng-model="$ctrl.sortChoice" ng-options="sort.id as sort.name for sort in $ctrl.sortOptions"></select>
+      <div class="no-tacos-container">
+        <button class="no-tacos-button"><a  href="#!/no-tacos">I don't want Tacos</a></button>
       </div>
-      <div class="card-grid">
-        <taco-card
-        class="taco-card-instance"
-        restaurant="restaurant"
-        ng-repeat="restaurant in $ctrl.restaurants | orderBy: $ctrl.sortChoice | filter:$ctrl.search">
-      </taco-card>
     </div>
-    <button><a href="#!/no-tacos">I don't want Tacos</a></button>
+    <div class="footer">
+      <p class="footer-text">© 2018 Vikram Badarinath, Bree Tanner, Emily Westenbroek. All Rights Reserved</p>
+    </div>
   </div>
-  <div class="footer">
-    © 2018 Vikram Badarinath, Bree Tanner, Emily Westenbroek. All Rights Reserved
-  </div>
-</div>

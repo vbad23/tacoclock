@@ -146,13 +146,48 @@
   width: 100%;
 }
 
+.no-tacos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.no-tacos-button {
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 350px;
+  background-color: var(--action-red);
+}
+
+.no-tacos-button a {
+  color: #FFF;
+  border-radius: 2px;
+  padding: 10px;
+  border: none;
+  font-family: var(--heading-font);
+  font-size: 18px;
+}
+
+.no-tacos-button:hover {
+  background-color: #930421;
+}
+
+.no-tacos-button:active {
+  background-color: #930421;
+}
+
 .footer {
   text-align: center;
   font-family: var(--body-font);
   font-size: 14px;
   color: #000;
-  margin-bottom: 20px;
   opacity: 0.7;
+}
+
+.footer-text {
+  margin: 10px;
 }
 
 @media (max-width: 1024px) {
