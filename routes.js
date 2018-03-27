@@ -12,3 +12,8 @@ angular.module("tacoApp").config(["$routeProvider", function($routeProvider) {
     template: '<error-page />',
   });
 }]);
+
+
+// make an html page in the bucket settings in the static websit ehosting, add the html page as the error page and #! doesnt exist.
+//
+// redirectTo: normal HTML page
