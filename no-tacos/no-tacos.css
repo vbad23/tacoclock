@@ -1,0 +1,32 @@
+.no-tacos-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F8F8F8;
+}
+
+.escape-button {
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 350px;
+  background-color: var(--action-red);
+}
+
+.escape-button a {
+  color: #FFF;
+  border-radius: 2px;
+  padding: 10px;
+  border: none;
+  font-family: var(--heading-font);
+  font-size: 18px;
+}
+
+.escape-button:hover {
+  background-color: #930421;
+}
+
+.escape-button:active {
+  background-color: #930421;
+}

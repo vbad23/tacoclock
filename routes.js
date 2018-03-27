@@ -8,6 +8,8 @@ angular.module("tacoApp").config(["$routeProvider", function($routeProvider) {
     }
   }).when('/taco-restaurant/:id', {
     template: '<taco-restaurant />',
+  }).when('/no-tacos', {
+    templateUrl: '/no-tacos/no-tacos.html',
   }).when('/404', {
     templateUrl: '/404-page/404-page.html',
   });
