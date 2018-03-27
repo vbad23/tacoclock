@@ -9,6 +9,6 @@ angular.module("tacoApp").config(["$routeProvider", function($routeProvider) {
   }).when('/taco-restaurant/:id', {
     template: '<taco-restaurant />',
   }).when('/no-tacos', {
-    template: '<no-tacos />',
+    templateUrl: '/no-tacos/no-tacos.html',
   });
 }]);
