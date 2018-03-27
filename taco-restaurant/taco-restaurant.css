@@ -116,12 +116,14 @@ html, body {
 
 .get-directions-container > a {
   text-decoration: underline;
-  color: var(--header-lg-color);
+  color: var(--action-red);
+
 }
 
 .get-directions-container > a:hover {
   text-decoration: underline;
-  color: #516d4e;
+  /* color: #840f27; very darker */
+  color: #930421;  /* lighter */
 }
 
 /* Map Styling */
