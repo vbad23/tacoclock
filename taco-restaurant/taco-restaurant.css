@@ -19,7 +19,6 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  justify-content: center;
   height: 100vh;
   background-color: var(--header-lg-color);
 }
@@ -27,7 +26,8 @@ html, body {
 .loading-taco-container {
   width: 200px;
   height: 200px;
-  margin-top: 35px;
+  /* margin-top: 35px; */
+  position: absolute;
 }
 
 .loading-taco img {
@@ -39,21 +39,6 @@ html, body {
   animation: 1.5s linear infinite rotate;
   transform-origin: 50% 50%;
 }
-
-/* .loader {
-  background: rgb(238, 192, 27);
-  position: absolute;
-  height: 75px;
-  width: 150px;
-  border-top-left-radius: 150px;
-  border-top-right-radius: 150px;
-  left: 50%;
-  top: 80px;
-  margin-left: -75px;
-  animation: 1s linear infinite rotate;
-  transform-origin: 50% 100%;
-  border: 1px solid #000;
-} */
 
 @keyframes rotate {
   from {
@@ -69,7 +54,6 @@ html, body {
   font-family: var(--heading-font);
   position: absolute;
   left: 50%;
-  top: 280px;
   margin: 0 0 0 -115px;
   color: #FFF;
 }
