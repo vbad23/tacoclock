@@ -18,11 +18,14 @@
 }
 
 .main-content-container {
-  margin-left: 10%;
-  margin-right: 10%;
+  /* margin-left: 10%;
+  margin-right: 10%; */
+  margin: 0 auto;
+  width: 80%;
+  justify-content: center;
   background-color: #fff;
   box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.2);
-  /* max-width: 1570px; */
+  max-width: 1570px;
 }
 
 .main-header-container {
@@ -256,6 +259,7 @@
 
   .main-content-container {
     margin: 0 5%;
+    width: 90%;
   }
 
   .main-header {
@@ -306,6 +310,7 @@
     flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: flex-start;
+    width: 100%;
   }
 
   .main-header-container .image-container {
