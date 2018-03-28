@@ -2,7 +2,7 @@
   margin: 0;
 }
 
-html, body {
+.loader-container html, body {
   background-color: var(--header-lg-color);
   height: 100%;
 }
@@ -301,15 +301,7 @@ html, body {
   }
 }
 
-.footer {
-  text-align: center;
-  font-family: var(--body-font);
-  font-size: 14px;
-  color: #000;
-  padding-bottom: 20px;
-  margin: 0px 35px;
-  opacity: 0.7;
-}
+/* Footer styling in taco-list.css */
 
 @media (max-width: 600px) {
   .footer {
