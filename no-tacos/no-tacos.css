@@ -1,9 +1,25 @@
 .no-tacos-container {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #F8F8F8;
+  background-color: #FFF;
+}
+
+.no-tacos-header {
+  font-family: var(--heading-font);
+  font-size: var(--header-med);
+  color: var(--color-block);
+}
+
+.gif-container {
+
+}
+
+.pixel-vik-gif {
+  height: 400px;
+  width: 400px;
 }
 
 .escape-button {
