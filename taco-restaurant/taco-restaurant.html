@@ -1,8 +1,14 @@
 <div ng-show=$ctrl.loading>
-  <div class="loadingText">
-    LOADING TACOS!
+  <div class="loader">
+    <div class="loading-taco-container">
+      <div class="loading-taco">
+        <img src="../assets/pixel-taco@3x.png">
+      </div>
+    </div>
+      <div class="loading-text">
+        LOADING TACOS!
+      </div>
   </div>
-  <div class="loader"></div>
 </div>
 <div class="restaurant-page" ng-show=$ctrl.loaded>
   <div class="restaurant-card">
@@ -23,7 +29,7 @@
         </div>
       </div>
       <div class="restaurant-info">
-        
+
         <p class="restaurant-name">{{$ctrl.restaurant.name}}</p>
         <p>{{$ctrl.address[0]}},</p>
         <p>{{$ctrl.address[1]}}</p>
