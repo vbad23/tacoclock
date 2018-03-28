@@ -1,10 +1,16 @@
+/* html {
+  background-color: #FFF;
+} */
+
 .no-tacos-container {
   height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #FFF;
+
 }
 
 .no-tacos-header {
@@ -22,21 +28,22 @@
   width: 400px;
 }
 
-.escape-button {
+.escape-button-container {
+  display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-  width: 500px;
-  background-color: var(--action-red);
-  border-radius: 3px;
 }
 
-.escape-button a {
+.escape-button {
+  height: 60px;
+  width: 350px;
+  font-family: var(--body-font);
+  font-size: 18px;
+  background-color: var(--action-red);
+  text-align: center;
   color: #FFF;
   padding: 10px;
   border: none;
-  font-family: var(--body-font);
-  font-size: 16px;
 }
 
 .escape-button:hover {
@@ -45,4 +52,29 @@
 
 .escape-button:active {
   background-color: #930421;
+}
+
+
+@media(max-width: 700px) {
+  .no-tacos-header  {
+    width: 375px;
+    height: auto;
+    text-align: center;
+  }
+}
+
+@media(max-width: 400px) {
+  .pixel-vik-gif {
+    height: 250px;
+    width: 250px;
+  }
+
+  .escape-button {
+    width: 250px;
+    font-size: 16px;
+  }
+
+  .no-tacos-container {
+    height: 100vh;
+  }
 }

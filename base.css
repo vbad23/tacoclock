@@ -14,13 +14,15 @@ input:focus {
 
 button:hover {
   background-color: #516d4e;
+  outline: none;
 }
 
 button:active {
   background-color: #6a8e66;
+  outline: none;
+  border: none;
 }
 
 button:focus {
   outline: none;
-  border: 2px solid var(--header-lg-color);
 }
