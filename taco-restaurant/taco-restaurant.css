@@ -53,6 +53,7 @@ html, body {
   background-color: #FFF;
   box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
+  max-width: 1325px;
 }
 
 .restaurant-card .header {

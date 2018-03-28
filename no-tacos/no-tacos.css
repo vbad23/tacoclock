@@ -10,7 +10,7 @@
 .no-tacos-header {
   font-family: var(--heading-font);
   font-size: var(--header-med);
-  color: var(--color-block);
+  color: var(--header-lg-color);
 }
 
 .gif-container {
@@ -25,18 +25,18 @@
 .escape-button {
   align-items: center;
   justify-content: center;
-  height: 50px;
-  width: 350px;
+  height: 40px;
+  width: 500px;
   background-color: var(--action-red);
+  border-radius: 3px;
 }
 
 .escape-button a {
   color: #FFF;
-  border-radius: 2px;
   padding: 10px;
   border: none;
-  font-family: var(--heading-font);
-  font-size: 18px;
+  font-family: var(--body-font);
+  font-size: 16px;
 }
 
 .escape-button:hover {
