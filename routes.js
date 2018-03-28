@@ -8,12 +8,9 @@ angular.module("tacoApp").config(["$routeProvider", function($routeProvider) {
     }
   }).when('/taco-restaurant/:id', {
     template: '<taco-restaurant />',
+  }).when('/no-tacos', {
+    templateUrl: '/no-tacos/no-tacos.html',
   }).when('/404', {
-    template: '<error-page />',
+    templateUrl: '/404-page/404-page.html',
   });
 }]);
-
-
-// make an html page in the bucket settings in the static websit ehosting, add the html page as the error page and #! doesnt exist.
-//
-// redirectTo: normal HTML page

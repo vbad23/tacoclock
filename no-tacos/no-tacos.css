@@ -1,0 +1,48 @@
+.no-tacos-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+}
+
+.no-tacos-header {
+  font-family: var(--heading-font);
+  font-size: var(--header-med);
+  color: var(--color-block);
+}
+
+.gif-container {
+
+}
+
+.pixel-vik-gif {
+  height: 400px;
+  width: 400px;
+}
+
+.escape-button {
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 350px;
+  background-color: var(--action-red);
+}
+
+.escape-button a {
+  color: #FFF;
+  border-radius: 2px;
+  padding: 10px;
+  border: none;
+  font-family: var(--heading-font);
+  font-size: 18px;
+}
+
+.escape-button:hover {
+  background-color: #930421;
+}
+
+.escape-button:active {
+  background-color: #930421;
+}

@@ -14,8 +14,11 @@
         <div class="input-fields">
           <div class="location-search">
             <form class="form" name="form" ng-submit="$ctrl.submit()" autocomplete="off">
-              <input type="text" class="search" ng-model="$ctrl.location" placeholder="Your location (Address, Zip, POI...)" id="locationInput" ng-required="true" name='input'/>
-              <button class="submit-button" ng-click="focusInput=true" ng-disabled="form.input.$pristine">SUBMIT</button>
+              <label class="label">Your location  </label>
+              <div class="input-button-container">
+                <input type="text" class="search address-search" ng-model="$ctrl.location" placeholder="Address, Zip, POI" id="locationInput" ng-required="true" name='input'/>
+                <button class="submit-button" ng-click="focusInput=true" ng-disabled="form.input.$pristine">SUBMIT</button>
+              </div>
             </form>
           </div>
         </div>
@@ -26,7 +29,8 @@
           Showing the nearest locations for:<br>{{$ctrl.locationName}}
         </div>
         <div class="search-filter">
-          <input ng-model="$ctrl.search" class="search" placeholder="Filter results"/>
+          <label class="label">Filter</label>
+          <input ng-model="$ctrl.search" class="search filter-input"/>
         </div>
         <div class="dropdown">
           <select ng-model="$ctrl.sortChoice" ng-options="sort.id as sort.name for sort in $ctrl.sortOptions"></select>
@@ -38,8 +42,11 @@
           ng-repeat="restaurant in $ctrl.restaurants | orderBy: $ctrl.sortChoice | filter:$ctrl.search">
         </taco-card>
       </div>
+      <div class="no-tacos-button-container">
+        <button class="no-tacos-button"><a  href="#!/no-tacos">I don't want Tacos</a></button>
+      </div>
     </div>
     <div class="footer">
-      © 2018 Vikram Badarinath, Bree Tanner, Emily Westenbroek. All Rights Reserved
+      <p class="footer-text">© 2018 Vikram Badarinath, Bree Tanner, Emily Westenbroek. All Rights Reserved</p>
     </div>
   </div>
