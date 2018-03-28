@@ -18,10 +18,14 @@
 }
 
 .main-content-container {
-  margin-left: 10%;
-  margin-right: 10%;
+  /* margin-left: 10%;
+  margin-right: 10%; */
+  margin: 0 auto;
+  width: 80%;
+  justify-content: center;
   background-color: #fff;
   box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.2);
+  max-width: 1570px;
 }
 
 .main-header-container {
@@ -165,7 +169,6 @@
 }
 
 .card-grid {
-  padding-bottom: 40px;
   margin: 0 10% 20px 10%;
   display: grid;
   grid-gap: 30px;
@@ -187,17 +190,21 @@
 .no-tacos-button {
   align-items: center;
   justify-content: center;
-  height: 50px;
-  width: 350px;
+  height: 40px;
+  width: 450px;
   background-color: var(--action-red);
+  border-radius: 2px;
+}
+
+.no-tacos-button {
+  border: none;
 }
 
 .no-tacos-button a {
   color: #FFF;
-  border-radius: 2px;
   padding: 10px;
   border: none;
-  font-family: var(--heading-font);
+  font-family: var(--body-font);
   font-size: 18px;
 }
 
@@ -256,6 +263,7 @@
 
   .main-content-container {
     margin: 0 5%;
+    width: 90%;
   }
 
   .main-header {
@@ -306,6 +314,7 @@
     flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: flex-start;
+    width: 100%;
   }
 
   .main-header-container .image-container {

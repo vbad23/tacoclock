@@ -11,18 +11,29 @@ body {
 }
 
 .loader {
-  background: rgb(238, 192, 27);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--header-lg-color);
+}
+
+.loading-taco-container {
+  width: 200px;
+  height: 200px;
+  /* margin-top: 35px; */
   position: absolute;
-  height: 75px;
-  width: 150px;
-  border-top-left-radius: 150px;
-  border-top-right-radius: 150px;
+}
+
+.loading-taco img {
+  width: 100%;
+  height: auto;
   left: 50%;
-  top: 80px;
-  margin-left: -75px;
-  animation: 1s linear infinite rotate;
-  transform-origin: 50% 100%;
-  border: 1px solid #000;
+  /* margin-top: 150px; */
+  /* margin-left: -75px; */
+  animation: 1.5s linear infinite rotate;
+  transform-origin: 50% 50%;
 }
 
 @keyframes rotate {
@@ -34,13 +45,13 @@ body {
   }
 }
 
-.loadingText {
+.loading-text {
   font-size: var(--header-med);
   font-family: var(--heading-font);
   position: absolute;
   left: 50%;
-  top: 280px;
   margin: 0 0 0 -115px;
+  color: #FFF;
 }
 
 .restaurant-page {
@@ -57,6 +68,7 @@ body {
   background-color: #FFF;
   box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
+  max-width: 1325px;
 }
 
 .restaurant-card .header {
