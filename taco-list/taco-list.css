@@ -166,7 +166,6 @@
 }
 
 .card-grid {
-  padding-bottom: 40px;
   margin: 0 10% 20px 10%;
   display: grid;
   grid-gap: 30px;
