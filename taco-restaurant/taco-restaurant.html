@@ -37,7 +37,16 @@
           <a href="https://www.google.com/maps/dir/?api=1&destination=
             {{$ctrl.restaurant.location.latitude}},
             {{$ctrl.restaurant.location.longitude}}" target="_blank">
-            <i class="fas fa-map-marker"></i>  Get Directions with Google Maps</a>
+            <i class="fas fa-map-marker"></i>  Directions from your location</a>
+        </div>
+        <div class="get-directions-container">
+          <a href="https://www.google.com/maps/dir/?api=1&origin=
+            {{$ctrl.searchLatitude}},
+            {{$ctrl.searchLongitude}}
+            &destination=
+            {{$ctrl.restaurant.location.latitude}},
+            {{$ctrl.restaurant.location.longitude}}" target="_blank">
+            <i class="fas fa-map-marker"></i>  Directions from search location</a>
         </div><br>
         <p>Price Range:<span class="dollar-signs">{{"$".repeat($ctrl.restaurant.price_range)}}</span><span class="dollar-signs-empty">{{"$".repeat(4 - $ctrl.restaurant.price_range)}}</span></p>
         <p>Average Price for Two:<span class="av-price"> {{$ctrl.restaurant.currency}}{{$ctrl.restaurant.average_cost_for_two}}</span></p>

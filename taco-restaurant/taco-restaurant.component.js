@@ -3,6 +3,8 @@ angular.module("tacoApp").component("tacoRestaurant", {
   controller: ['RestaurantService', "$routeParams", function(RestaurantService, $routeParams) {
     this.loading = true;
     this.loaded = false;
+    this.searchLatitude = RestaurantService.latitude;
+    this.searchLongitude = RestaurantService.longitude;
     this.mapImage = document.querySelector("img");
 
     // Uses the page route to get the restaurant information
