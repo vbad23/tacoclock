@@ -57,7 +57,7 @@
 
 @media(max-width: 700px) {
   .no-tacos-header  {
-    width: 375px;
+    width: 300px;
     height: auto;
     text-align: center;
   }
